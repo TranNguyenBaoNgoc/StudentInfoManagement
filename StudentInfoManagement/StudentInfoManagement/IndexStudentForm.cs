@@ -57,10 +57,22 @@ namespace StudentInfoManagement
         {
             this.LoadAllStudents();
         }
+        //private void ViewAll()
+        //{
+        //    var db = new OOPCSEntities();
+        //    var stu = db.PM06660.ToArray();
+        //    var stuView = new ViewMember[stu.Length];
+        //    for (int i = 0; i < stu.Length; i++)
+        //    {
+        //        stuView[i] = new ViewMember(stu[i]);
+        //    }
+        //    this.grdStudent.DataSource = stuView;
+        //}
         private void LoadAllStudents()
         {
             var students = this.Business.GetStudents();
             this.grdStudent.DataSource = students;
+            //this.ViewAll();
         }
     }
 }
